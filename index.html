@@ -1,44 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  Bill
+  <div id="dlogo">
+    <img src="images/logo.svg" id="logo">
+  </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+  <div id="bloque">
+    <div id="datos" class="float">
 
-  Number of People
+      <p>
+        <label for="bill">Bill</label>
+        <input type="text" name="bill" id="bill">
+      </p>
 
-  Tip Amount
-  / person
+      <p>
+        <label>Select Tip %</label>
+      </p>
+      <div id="porcentajes">
+        <div>
+          <div class="float">5%</div>
+          <div class="float">10%</div>
+          <div class="float">15%</div>
+        </div>
+        <div>
+          <div class="float">25%</div>
+          <div class="float">50%</div>
+          <div class="float">Custom</div>
+        </div>
+      </div>
 
-  Total
-  / person
+      <p>
+        <label for="nump">Number of People</label>
+        <input type="text" name="nump" id="nump">
+      </p>
+    </div>
 
-  Reset
-  
+    <div id="resultados" class="float">
+
+      <div id="tipAm">
+
+        <div class="div1">
+          <label class="rlabel">Tip Amount</label>
+          <span class="rspan">/ person</span>
+        </div>
+
+        <div>
+          <label class="rnum">$0.00</label>
+        </div>
+
+      </div>
+
+      <div id="total">
+
+        <div class="div1">
+          <label class="rlabel">Total</label>
+          <span class="rspan">/ person</span>
+        </div>
+
+        <div>
+          <label class="rnum">$0.00</label>
+        </div>
+
+      </div>
+
+      <p id="contreset"><input type="text" name="reset" id="reset" value="Reset"></p>
+    </div>
+  </div>
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">David Porras</a>.
   </div>
 </body>
+
 </html>
