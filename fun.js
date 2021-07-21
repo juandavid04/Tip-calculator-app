@@ -5,26 +5,44 @@ $(document).ready(function () {
     var personas = 0
     var ultid = 0;
 
+    $('.dato').focus(Element => { 
+        Element.target.className = 'dato foco'
+    });
+    $('.dato').blur(Element => { 
+        Element.target.className = 'dato sinfoco'
+    });
+
+    function validar(valor,id){
+        if(valor != 0){
+            document.getElementById(id).className = 'dato'
+            document.getElementById("s"+id).className = 'spanhidden'
+            console.log(valor)
+            total()
+        }
+        else{
+            document.getElementById(id).className = 'dato datozero'
+            document.getElementById("s"+id).className = 'spanvis'
+        }
+    }
+
     $('#bill').on('input', function(){
         bill = $('#bill').val()
-        console.log(bill)
-
-        total()
+        validar(bill,'bill')
     })
 
-    $("#porcentajes .floatp").click(Element => { 
+    $("#porcentajes .porcent").click(Element => { 
         $("#custom").val("")
         let value = Element.target.id
         porcentaje = value/100
-        document.getElementById(value).className = 'floatp2'
-        if(ultid!=value & ultid!=0){document.getElementById(ultid).className = 'floatp'}
+        document.getElementById(value).className = 'porcent2 float'
+        if(ultid!=value & ultid!=0){document.getElementById(ultid).className = 'porcent float'}
         ultid = value
 
         total()
     })
 
     $("#custom").on('input', Element => {
-        if(ultid!=0){document.getElementById(ultid).className = 'floatp'}
+        if(ultid!=0){document.getElementById(ultid).className = 'porcent float'}
         let value = Element.target.value
         porcentaje = value/100
         
@@ -33,9 +51,7 @@ $(document).ready(function () {
 
     $("#nump").on('input', Element => {
         personas = Element.target.value
-        console.log(personas)
-
-        total()
+        validar(personas,'nump')
     })
 
     function total(){
@@ -51,7 +67,7 @@ $(document).ready(function () {
         $("#bill").val("")
         bill = 0
 
-        if(ultid!=0){document.getElementById(ultid).className = 'floatp'}
+        if(ultid!=0){document.getElementById(ultid).className = 'porcent float'}
         $("#custom").val("")
         porcentaje = 0
 
@@ -62,6 +78,11 @@ $(document).ready(function () {
 
         document.getElementById('tipm').innerHTML = '$0.00'
         document.getElementById('t').innerHTML = '$0.00'
+
+        document.getElementById('bill').className = 'dato'
+        document.getElementById('nump').className = 'dato'
+        document.getElementById("sbill").className = 'spanhidden'
+        document.getElementById("sbill").className = 'spanhidden'
     })
 });
 

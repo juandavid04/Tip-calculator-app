@@ -28,7 +28,8 @@
 
       <p>
         <label for="bill">Bill</label>
-        <input type="number" name="bill" id="bill" class="dato">
+        <input type="number" name="bill" id="bill" class="dato sinfoco">
+        <span id="sbill" class="spanhidden">Can't be zero</span>
       </p>
 
       <p>
@@ -36,20 +37,21 @@
       </p>
       <div id="porcentajes">
         <div>
-          <div id="5"  class="floatp">5%</div>
-          <div id="10" class="floatp">10%</div>
-          <div id="15" class="floatp">15%</div>
+          <div id="5"  class="porcent float">5%</div>
+          <div id="10" class="porcent float">10%</div>
+          <div id="15" class="porcent float">15%</div>
         </div>
         <div>
-          <div id="25" class="floatp">25%</div>
-          <div id="50" class="floatp">50%</div>
+          <div id="25" class="porcent float">25%</div>
+          <div id="50" class="porcent float">50%</div>
           <input type="text" name="custom" id="custom" placeholder="Custom" class="custom1">
         </div>
       </div>
 
       <p>
         <label for="nump">Number of People</label>
-        <input type="number" name="nump" id="nump" class="dato">
+        <input type="number" name="nump" id="nump" class="dato sinfoco">
+        <span id="snump" class="spanhidden">Can't be zero</span>
       </p>
     </div>
 
@@ -57,12 +59,12 @@
 
       <div id="tipAm">
 
-        <div class="div1">
+        <div class="div1 float">
           <label class="rlabel">Tip Amount</label>
           <span class="rspan">/ person</span>
         </div>
 
-        <div>
+        <div class="float">
           <label id="tipm" class="rnum">$0.00</label>
         </div>
 
@@ -70,12 +72,12 @@
 
       <div id="total">
 
-        <div class="div1">
+        <div class="div1 float">
           <label class="rlabel">Total</label>
           <span class="rspan">/ person</span>
         </div>
 
-        <div>
+        <div class="float">
           <label id="t" class="rnum">$0.00</label>
         </div>
 
