@@ -229,6 +229,18 @@ div.float{float: left;}
         color: white;
     }
 
+    .porcent2{
+        background-color: hsl(172, 67%, 45%);
+        margin: 0px 10px 10px 0px;
+        padding-top: 0.5em;
+        padding-bottom: 0.3em;
+        width: 10.5em;
+        height: 2em;
+        border-radius: 5px;
+        text-align: center;
+        color: white;
+    }
+
     .custom1{
         float: left;
         width: 10.5em;
